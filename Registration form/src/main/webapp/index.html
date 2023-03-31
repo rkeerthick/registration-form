@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>JQuery Exercise</title>
+
+      <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+
+</head >
+
+<body>
+
+<div class="form">
+      
+      
+      
+      <div class="tab-content">   
+          <h1>Register Here</h1>
+          
+          <form id="form-details" action="registerServlet" method="post" onsubmit="submit()">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              
+              <input id="first-name" type="text" name="first-name" placeholder="first name" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <input id="last-name" type="text" name="last-name" placeholder="last name" required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <input id="email" type="email" name="email" placeholder="a@mail.com" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <input id="password" type="text" name="password" placeholder="password" required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="button button-block"/>Register</button>
+          
+          </form>
+
+        </div>
+        
+        
+      
+</div> <!-- /form -->
+
+<script src="index.js"></script>
+
+   <!-- <script type="text/javascript">
+
+    $("form").submit(function(e) {
+
+      e.preventDefault();
+
+      var first_name=$("#first-name").val();
+
+      var last_name=$("#last-name").val();
+
+      var email=$("#email").val();
+
+      var password=$("#password").val();
+		//alert(email);
+
+
+       $(".data-table tbody").append("<tr data-first-name='"+first_name+"' data-last-name='"+last_name +"' data-email='"+email+"'  data-password = '"+password+"' ><td>"+first_name+"</td><td>"+last_name+"</td><td>"+email+"</td><td>"+password+"</td><td><button class='btn btn-danger btn-lg btn-delete mr-3' type='button'>Delete</button><button class='btn btn-info btn-lg btn-edit' type='button'>Edit</button></td></tr>");
+
+
+
+       $("input[name='']").val("");
+
+    });
+
+
+
+    $('body').on('click','.btn-delete',function() {
+
+      $(this).parents('tr').remove();
+
+    });
+
+
+
+    $('body').on('click','.btn-edit',function() {
+
+      var first_name=$(this).parents('tr').attr('data-first-name');
+
+      var last_name=$(this).parents('tr').attr('data-last-name');
+
+      var email=$(this).parents('tr').attr('data-email');
+
+      var password=$(this).parents('tr').attr('data-password');
+
+
+
+      $(this).parents('tr').find('td:eq(0)').html("<input name='edit_first_name' value='"+first_name+"'>");
+
+      $(this).parents('tr').find('td:eq(1)').html("<input name='edit_last_name' value='"+last_name+"'>");
+
+      $(this).parents('tr').find('td:eq(2)').html("<input name='edit_email' value='"+email+"'>");
+
+      $(this).parents('tr').find('td:eq(3)').html("<input name='edit_password' value='"+password+"'>");
+
+
+      $(this).parents('tr').find('td:eq(4)').prepend("<button type='button' class='btn btn-info btn-lg btn-update mr-3'>Update</button>");
+
+      $(this).hide()
+
+    });
+
+
+
+    $('body').on('click','.btn-update',function() {
+
+      var first_name=$(this).parents('tr').find("input[name='edit_first_name']").val();
+
+      var last_name=$(this).parents('tr').find("input[name='edit_last_name']").val();
+
+      var email=$(this).parents('tr').find("input[name='edit_email']").val();
+
+      var password=$(this).parents('tr').find("input[name='edit_password']").val();
+
+
+
+      $(this).parents('tr').find('td:eq(0)').text(first_name);
+
+      $(this).parents('tr').find('td:eq(1)').text(last_name);
+
+      $(this).parents('tr').find('td:eq(2)').text(email);
+
+      $(this).parents('tr').find('td:eq(3)').text(password);
+
+
+
+      $(this).parents('tr').attr('data-first-name',first_name);
+
+      $(this).parents('tr').attr('data-last-name',last_name);
+
+      $(this).parents('tr').attr('data-email',email);
+
+      $(this).parents('tr').attr('data-password',password);
+
+
+
+      $(this).parents('tr').find('.btn-edit').show();
+
+      $(this).parents('tr').find('.btn-update').remove();
+
+
+
+
+
+    })
+
+
+
+   </script>
+   
+   -->
+
+</body>
+
+</html>
+
